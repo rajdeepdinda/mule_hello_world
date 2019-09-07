@@ -24,7 +24,20 @@
                 <groupId>org.mule.tools.maven</groupId>
                 <artifactId>mule-maven-plugin</artifactId>
                 <version>${mule.maven.plugin.version}</version>
-                <extensions>true</extensions>
+		    <configuration>
+			<cloudHubDeployment>
+			    <uri>https://anypoint.mulesoft.com</uri>
+			    <muleVersion>4.2.1</muleVersion>
+			    <username></username>
+			    <password></password>
+			    <applicationName>rajdeep-dinda-hello-world</applicationName>
+			    <environment>sandbox</environment>
+			    <properties>
+				<env>dev</env>
+			    </properties>
+			</cloudHubDeployment>
+		    </configuration>
+		    <extensions>true</extensions>
             </plugin>
         </plugins>
     </build>
