@@ -45,22 +45,9 @@
                         <phase>test</phase>
                         <goals>
                             <goal>test</goal>
-                            <goal>coverage-report</goal>
                         </goals>
                     </execution>
-                </executions>
-                <configuration>
-                    <coverage>
-                        <runCoverage>true</runCoverage>
-                        <formats>
-                            <format>html</format>
-                        </formats>
-                    </coverage>
-                    <runtimeVersion>${app.runtime}</runtimeVersion>
-                    <dynamicPorts>
-                        <dynamicPort>http.port</dynamicPort>
-                    </dynamicPorts>
-                </configuration>
+                </executions>    
             </plugin>
         </plugins>
     </build>
