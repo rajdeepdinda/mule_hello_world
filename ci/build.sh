@@ -3,7 +3,7 @@
 set -e -x
 
 cd source-code
-mvn clean package
+mvn clean package deploy -DmuleDeploy
 cd ..
 
 cp source-code/target/*.jar  build-output/.
