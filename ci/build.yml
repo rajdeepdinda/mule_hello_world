@@ -8,8 +8,11 @@ image_resource:
     tag: '8-jdk-alpine'
 
 
+inputs:
+  - name: source-code
+
 outputs:
   - name: build-output
 
 run:
-  path: ci/build.sh
+  path: source-code/ci/build.sh
