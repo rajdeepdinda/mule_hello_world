@@ -32,7 +32,7 @@
 			    <username>rajdeepdinda_yahoo</username>
 			    <password>Rajdeep@1234</password>
 			    <applicationName>rajdeep-dinda-hello-world</applicationName>
-			    <environment>sandbox</environment>
+			    <environment>Sandbox</environment>
 			    <properties>
 				<env>dev</env>
 			    </properties>
