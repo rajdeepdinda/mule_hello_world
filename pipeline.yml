@@ -1,0 +1,10 @@
+
+---
+
+jobs:
+- name: maven-build-job
+  public: true
+  plan:
+  - task: maven-build
+    file: ci/build.yml
+
