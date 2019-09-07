@@ -195,12 +195,12 @@ if $cygwin; then
 fi
 
 # traverses directory structure from process work directory to filesystem root
-# first directory with .mvn subdirectory is considered project base directory
+# first directory with mvn subdirectory is considered project base directory
 find_maven_basedir() {
   local basedir=$(pwd)
   local wdir=$(pwd)
   while [ "$wdir" != '/' ] ; do
-    if [ -d "$wdir"/.mvn ] ; then
+    if [ -d "$wdir"/mvn ] ; then
       basedir=$wdir
       break
     fi
@@ -217,7 +217,7 @@ concat_lines() {
 }
 
 export MAVEN_PROJECTBASEDIR=${MAVEN_BASEDIR:-$(find_maven_basedir)}
-MAVEN_OPTS="$(concat_lines "$MAVEN_PROJECTBASEDIR/.mvn/jvm.config") $MAVEN_OPTS"
+MAVEN_OPTS="$(concat_lines "$MAVEN_PROJECTBASEDIR/mvn/jvm.config") $MAVEN_OPTS"
 
 # Provide a "standardized" way to retrieve the CLI args that will
 # work with both Windows and non-Windows executions.
@@ -228,6 +228,6 @@ WRAPPER_LAUNCHER=org.apache.maven.wrapper.MavenWrapperMain
 
 exec "$JAVACMD" \
   $MAVEN_OPTS \
-  -classpath "$MAVEN_PROJECTBASEDIR/.mvn/wrapper/maven-wrapper.jar" \
+  -classpath "$MAVEN_PROJECTBASEDIR/mvn/wrapper/maven-wrapper.jar" \
   "-Dmaven.home=${M2_HOME}" "-Dmaven.multiModuleProjectDirectory=${MAVEN_PROJECTBASEDIR}" \
   ${WRAPPER_LAUNCHER} $MAVEN_CMD_LINE_ARGS
