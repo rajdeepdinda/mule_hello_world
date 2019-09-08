@@ -3,10 +3,11 @@
 set -e -x
 
 cd source-code
-mvn clean package deploy -DmuleDeploy
-cd ..
+mvn clean test
 
-cp source-code/target/*.jar  build-output/.
 
-cd build-output
-ls -ltr
+#mvn clean package deploy -DmuleDeploy
+#cd ..
+#cp source-code/target/*.jar  build-output/.
+#cd build-output
+#ls -ltr
