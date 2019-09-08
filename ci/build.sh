@@ -4,16 +4,18 @@ set -e -x
 
 pwd
 cd source-code
-mkdir target
-ls -altr
+#mkdir target
+#ls -altr
 
 #mvn clean test -DruntimeProduct=MULE
 
-#mvn clean package -DskipMunitTests
-#ls -ltr
-#cd ..
-#cp source-code/target/*.jar  build-output/.
-#ls -ltr
-#cd build-output
-#ls -ltr
+mvn clean package -DskipMunitTests
+ls -ltr
+cd ../build-output
+mkdir target
+cd..
+cp source-code/target/*.jar  build-output/target/.
+cd build-output/target
+ls -ltr
+mvn deploy -DskipMunitTests -DmuleDeploy
 
