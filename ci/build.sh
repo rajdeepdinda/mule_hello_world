@@ -13,7 +13,7 @@ cd source-code
 
 #mvn clean test -DruntimeProduct=MULE
 
-mvn clean package -DskipMunitTests
+#mvn clean package -DskipMunitTests
 ls -ltr
 cd ../build-output
 mkdir target
@@ -22,5 +22,5 @@ cp source-code/target/*.jar  build-output/target/.
 cd build-output/target
 ls -ltr
 cd ..
-mvn deploy -DmuleDeploy
+#mvn deploy -DmuleDeploy
 
