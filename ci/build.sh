@@ -13,7 +13,7 @@ mvn clean package -DskipMunitTests
 ls -ltr
 cd ../build-output
 mkdir target
-cd..
+cd ..
 cp source-code/target/*.jar  build-output/target/.
 cd build-output/target
 ls -ltr
