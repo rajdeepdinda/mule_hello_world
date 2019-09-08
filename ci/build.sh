@@ -3,6 +3,10 @@
 set -e -x
 
 pwd
+
+npm install -g anypoint-cli@2.3.2
+
+
 cd source-code
 #mkdir target
 #ls -altr
