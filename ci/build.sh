@@ -3,13 +3,15 @@
 set -e -x
 
 cd source-code
+mkdir target
+
 #mvn clean test -DruntimeProduct=MULE
 
-mvn clean package -DskipMunitTests
-ls -ltr
-cd ..
-cp source-code/target/*.jar  build-output/.
-ls -ltr
-cd build-output
-ls -ltr
+#mvn clean package -DskipMunitTests
+#ls -ltr
+#cd ..
+#cp source-code/target/*.jar  build-output/.
+#ls -ltr
+#cd build-output
+#ls -ltr
 
