@@ -3,8 +3,7 @@
 set -e -x
 
 cd source-code
-mvn clean test
-
+mvn clean test -DruntimeProduct=MULE
 
 #mvn clean package deploy -DmuleDeploy
 #cd ..
