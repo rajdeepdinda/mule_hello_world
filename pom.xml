@@ -17,6 +17,7 @@
         <mule.maven.plugin.version>3.2.7</mule.maven.plugin.version>
         <http.connector.version>1.5.6</http.connector.version>
         <sockets.connector.version>1.1.5</sockets.connector.version>
+	<munit.version>2.2.1</munit.version>
     </properties>
 	
     <build>
@@ -40,7 +41,31 @@
 		    </configuration>
 		    <extensions>true</extensions>
             </plugin>
-        </plugins>
+	    <plugin>
+                <groupId>com.mulesoft.munit.tools</groupId>
+                <artifactId>munit-maven-plugin</artifactId>
+                <version>${munit.version}</version>
+                <executions>
+                    <execution>
+                        <id>test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>test</goal>
+                            <goal>coverage-report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <coverage>
+                        <runCoverage>true</runCoverage>
+                        <formats>
+                            <format>html</format>
+                        </formats>
+                    </coverage>
+                </configuration>
+            </plugin>
+
+	  </plugins>
     </build>
 
     <dependencies>
@@ -57,7 +82,19 @@
             <version>${sockets.connector.version}</version>
             <classifier>mule-plugin</classifier>
         </dependency>
-
+	<dependency>
+            <groupId>com.mulesoft.munit</groupId>
+            <artifactId>munit-runner</artifactId>
+            <version>2.2.1</version>
+            <classifier>mule-plugin</classifier>
+            <scope>test</scope>
+        </dependency>	<dependency>
+            <groupId>com.mulesoft.munit</groupId>
+            <artifactId>munit-tools</artifactId>
+            <version>2.2.1</version>
+            <classifier>mule-plugin</classifier>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     
     <repositories>
