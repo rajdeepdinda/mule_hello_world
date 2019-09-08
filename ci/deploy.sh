@@ -2,6 +2,7 @@
 
 set -e -x
 
+pwd
 ls -altr
 cd source-code
 ls -altr
