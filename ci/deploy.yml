@@ -7,6 +7,9 @@ image_resource:
     repository: maven
     tag: '3.6.1-jdk-8'
 
+inputs:
+  - name: source-code
+
 run:
   path: sh
   args:
