@@ -95,6 +95,14 @@
             <classifier>mule-plugin</classifier>
             <scope>test</scope>
         </dependency>
+	<!-- https://mvnrepository.com/artifact/org.mule.tooling/mule-runtime-tooling-client-parent -->
+	<dependency>
+	    <groupId>org.mule.tooling</groupId>
+	    <artifactId>mule-runtime-tooling-client-parent</artifactId>
+	    <version>4.2.1</version>
+	    <type>pom</type>
+	</dependency>
+	
     </dependencies>
     
     <repositories>
