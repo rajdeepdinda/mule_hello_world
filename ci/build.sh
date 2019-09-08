@@ -4,6 +4,7 @@ set -e -x
 
 cd source-code
 mkdir target
+ls -altr
 
 #mvn clean test -DruntimeProduct=MULE
 
