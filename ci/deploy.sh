@@ -2,8 +2,8 @@
 
 set -e -x
 
-ls -ltr
+ls -altr
 cd source-code
-ls -ltr
+ls -altr
 #mvn deploy -DmuleDeploy 
 
