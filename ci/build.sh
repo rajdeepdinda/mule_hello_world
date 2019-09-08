@@ -2,6 +2,7 @@
 
 set -e -x
 
+pwd
 cd source-code
 mkdir target
 ls -altr
