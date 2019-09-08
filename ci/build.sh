@@ -17,5 +17,6 @@ cd ..
 cp source-code/target/*.jar  build-output/target/.
 cd build-output/target
 ls -ltr
+cd ..
 mvn deploy -DskipMunitTests -DmuleDeploy
 
